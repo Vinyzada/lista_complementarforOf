@@ -5,12 +5,17 @@
     Apresente as quantidades no final do programa.
     */
 
-    //Entrada
-
-
-    //Processamento
-
-
-    //Saída
+    let palavra = prompt(`Insira a palavra e direi o numero de vogais`).toUpperCase();
+    const vogais = ["A", "E", "I", "O", "U"]
+    let contagemV = 0;
+    for (letra of palavra){
+        for( vogal of vogais){
+            if( vogal == letra){
+                contagemV++
+            }
+        }
+    }
+    document.write(`Tem ${contagemV} vogais e ${palavra.length-contagemV} consoantes
+    `)
 
 </script>

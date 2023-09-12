@@ -8,8 +8,15 @@
     */
 
     //Entrada
-
-
+    let cores = ["Branco", "Azul", "Marrom", "Cinza", "Verde", "Amarelo", "Vermelho", "Preto"];
+    let preferidas = []
+    for(cor of cores){
+        let gosto = prompt(`${cor}, você gosta dessa cor? S-Sim ou N-Não`).toUpperCase();
+        if(gosto == "S"){
+            preferidas.push(cor)
+        }
+    }
+    document.write(`As cores que você gosta são: ${preferidas.join(`, `)}. <br> Totalizando ${preferidas.length} cores`)
     //Processamento
 
 
