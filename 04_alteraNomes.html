@@ -7,12 +7,16 @@
     Apresente a lista corrigida ao final do programa.
     */
 
-    //Entrada
-
-
-    //Processamento
-
-
-    //Saída
-
+    let nomes = ["Hilário", "Rafaela", "José", "Bárbara", "Fábio", "Júlia"];
+    let corrigido = []
+    for(nome of nomes){
+        if(nome.search("á") || nome.search("é") || nome.search("ú") || nome.search("í") || nome.search("ó")){
+            nome = nome.replace(/á/g, "a").replace(/é/g, "e").replace(/í/g, "i").replace(/ó/g, "o").replace(/ú/g, "u");
+            corrigido.push(nome)
+        }
+        else{
+            corrigido.push(nome)
+        }
+    }
+    document.write(corrigido.join(", "));
 </script>
