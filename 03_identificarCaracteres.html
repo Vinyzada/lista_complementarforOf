@@ -9,10 +9,8 @@
     const vogais = ["A", "E", "I", "O", "U"]
     let contagemV = 0;
     for (letra of palavra){
-        for( vogal of vogais){
-            if( vogal == letra){
-                contagemV++
-            }
+        if (vogais.includes(letra)) {
+            contagemV++;
         }
     }
     document.write(`Tem ${contagemV} vogais e ${palavra.length-contagemV} consoantes

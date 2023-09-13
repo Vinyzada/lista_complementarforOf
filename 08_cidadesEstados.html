@@ -8,4 +8,26 @@
     */
 
     let cidades = ["Porto Alegre", "Curitiba", "Florianópolis", "Joinville", "Blumenau", "Gramado", "Santa Maria", "Londrina", "Itajaí"];
+    let rS = [];
+    let pR = [];
+    let sC = [];
+    for(cidade of cidades){
+        let pergunta = prompt(`Essa cidade -->${cidade}<-- pertence a qual estado? PR-Parana, SC-SantaCatarina ou RS-Rio Grande do Sul`).toUpperCase();
+        if( pergunta == "SC"){
+            sC.push(cidade);
+        }
+        else if(pergunta == "PR"){
+            pR.push(cidade);
+        }
+        else if(pergunta == "RS"){
+            rS.push(cidade);
+        }
+    }
+    rS.unshift(`O estado do Rio Grande do Sul contém ${rS.length} cidades`);
+    pR.unshift(`O estado do Paraná contém ${pR.length} cidades`);
+    sC.unshift(`O estado de Santa Catarina contém ${sC.length} cidades`);
+    let estados = [rS, pR, sC];
+    estados = estados.sort((a, b) => b[1].length - a[1].length);
+    document.write(`${estados[0]} <br> ${estados[1]} <br> ${estados[2]}`)
+
 </script>
